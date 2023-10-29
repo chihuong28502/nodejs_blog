@@ -7,27 +7,28 @@ const port = 3002;
 app.use(express.static(path.join(__dirname, 'public')));
 
 const route = require('./routes/index');
-
-app.use(
-                                              express.urlencoded({
-        extended: true,
-    }),
+//test
+              app.use(
+                  express.urlencoded({
+                      extended: true,
+                  }),
 );
 app.use(express.json());
 // app.use(morgan("combined"));
 
 // cấu hình handlebars
-app.engine(
-    'hbs',
-    exphbs.engine({
-        extname: '.hbs',
-    }),
+// asd
+          app.engine(
+              'hbs',
+              exphbs.engine({
+                  extname: '.hbs',
+              }),
 );
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
 // routes init
-route(app);
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
-});
+                  route(app);
+                  app.listen(port, () => {
+                      console.log(`Example app listening on port ${port}`);
+                  });
