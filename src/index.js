@@ -9,10 +9,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 const route = require('./routes/index');
 //test
               app.use(
-                // a
-                  express.urlencoded({
-                      extended: true,
-                  }),
+                          // a
+                            express.urlencoded({
+                                extended: true,
+                            }),
 );
 app.use(express.json());
 // app.use(morgan("combined"));
